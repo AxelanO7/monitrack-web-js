@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  a {
+    @apply text-slate-900 dark:text-slate-100 hover:text-sky-600 dark:hover:text-sky-400;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-500;
+  }
+
+  button {
+    @apply inline-flex items-center justify-center rounded-lg bg-sky-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+}
+
+.table-wrapper {
+  @apply overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-700;
+}
+
+.card {
+  @apply rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow p-4;
+}
+
+.card-title {
+  @apply text-xl font-semibold text-slate-900 dark:text-white;
+}
+
+.card-label {
+  @apply text-sm text-slate-500 dark:text-slate-400;
+}

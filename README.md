@@ -1,53 +1,33 @@
-# Next.js & HeroUI Template
+# Monitrack Web (Next.js)
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+Monitrack adalah aplikasi pelacak pemasukan dan pengeluaran pribadi yang berjalan 100% di browser. Seluruh data disimpan di IndexedDB dan localStorage sehingga tidak membutuhkan backend ataupun akun.
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+## Fitur
 
-## Technologies Used
+- Dashboard dengan ringkasan saldo, pemasukan/pengeluaran bulanan, dan grafik pengeluaran 7 hari terakhir.
+- Form tambah transaksi dengan kategori preset dan kategori custom yang otomatis tersimpan.
+- Riwayat transaksi lengkap dengan filter rentang tanggal (hari ini, minggu ini, bulan ini, semua, dan custom).
+- Export data ke CSV/JSON dan import kembali langsung dari browser.
+- Pengaturan profil sederhana untuk nama pengguna dan mata uang utama.
+- Desain responsif menggunakan Tailwind CSS dengan dukungan dark mode.
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
+## Teknologi
+
+- [Next.js 15](https://nextjs.org/)
+- [React 18](https://react.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- IndexedDB (native browser API)
+- Chart.js
 
-## How to Use
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
+## Menjalankan secara lokal
 
 ```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
+pnpm install
+pnpm dev
 ```
 
-### Install dependencies
+Aplikasi akan berjalan di `http://localhost:3000`.
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+## Deployment
 
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+Aplikasi dapat langsung dideploy ke Vercel tanpa konfigurasi tambahan karena seluruh fitur berjalan di sisi klien.
