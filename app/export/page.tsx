@@ -40,7 +40,7 @@ export default function ExportPage() {
         .map((item) => ({
           id: String(item.id ?? generateId()),
           user: String(item.user ?? "default"),
-          type: item.type === "income" ? "income" : "expense",
+          type: (item.type === "income" || item.type === "expense") ? item.type : "expense",
           category: String(item.category ?? "Lainnya"),
           amount: Number(item.amount ?? 0),
           note: String(item.note ?? ""),
